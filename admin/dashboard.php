@@ -9,12 +9,13 @@
 <body>
     <?php
 session_start();
-if (!isset($_SESSION['admin'])) { header("Location: login.php"); exit; }
+if (!isset($_SESSION['admin'])) { header("Location: index.php"); exit; }
 require '../connection/connection.php';
 $res = $conn->query("SELECT * FROM complaints ORDER BY created_at DESC");
 ?>
-    <div class="bg-warning mb-5 p-4">
+    <div class="bg-warning mb-5 p-4 d-flex justify-content-around">
         <h2 class="pl-5">Admin Dashboard</h2>
+        <a href="index.php" class="btn btn-danger">Logout</a>
     </div>
     <div class="container">
         <h4>All User Information</h4>

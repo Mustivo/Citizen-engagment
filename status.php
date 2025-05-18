@@ -24,7 +24,7 @@ if (isset($_GET['id'])) {
     if ($res->num_rows > 0) {
         $row = $res->fetch_assoc();
         echo "<h3>Status: " . $row['status'] . "</h3>";
-        echo "<p><strong>Description:</strong> " . $row['name'] . "</p>";
+        echo "<p><strong>Name:</strong> " . $row['name'] . "</p>";
         echo "<p><strong>Description:</strong> " . $row['description'] . "</p>";
         echo "<p><strong>Admin Response:</strong> " . $row['admin_response'] . "</p>";
         echo "<p class='text-center'><strong>Thank you for your Message!</strong></p>";
